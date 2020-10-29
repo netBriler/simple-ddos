@@ -31,8 +31,8 @@ address = ''
 while not address:
     address = input(f'Ip: ')
 
-port = int(input(f'Port {Fore.CYAN}(80 by default){Fore.RESET}: ') or 80)
-threads = int(input(f'Threads {Fore.CYAN}(2000 by default){Fore.RESET}: ') or 2000)
+port = int(input(f'Port (80 by default): ') or 80)
+threads = int(input(f'Threads (2000 by default): ') or 2000)
 
 # Starting fun
 user_agents = UserAgent()
